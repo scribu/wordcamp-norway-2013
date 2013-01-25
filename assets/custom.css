@@ -1,15 +1,17 @@
-.slides article img.centered {
+h1 {
+	margin-top: 150px !important;
+}
+
+article img.centered {
 	max-width: 100%;
 	max-height: 100%;
 }
 
-.slides .vcentered img.centered {
+article img.centered.vcentered {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate(-50%, -55%);
-	-moz-transform: translate(-50%, -55%);
-	-o-transform: translate(-50%, -55%);
+	transform: translate(-50%, -55%);
 }
 
 .slides .logo img.centered {
@@ -25,3 +27,19 @@
 article ul {
 	margin-bottom: 80px;
 }
+
+p + .in-the-middle {
+	margin-top: 1.5em;
+}
+
+.in-the-middle ul {
+	margin-top: .5em;
+}
+
+#boratpose {
+	transform: translate(80px, -30px) rotate(20deg);
+}
+
+#boratgreat {
+}
+
