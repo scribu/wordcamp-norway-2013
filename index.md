@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Command Line Learnings For Make Benefit Glorious Nation of WordPress
 ---
 <article>
 <h1>Hello,</h1>
