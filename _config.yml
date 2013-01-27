@@ -2,3 +2,5 @@ safe: true
 lsi: false
 markdown: redcarpet
 pygments: false
+exclude:
+  - README.md
