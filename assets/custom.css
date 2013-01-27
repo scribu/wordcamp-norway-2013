@@ -37,9 +37,7 @@ p + .in-the-middle {
 }
 
 #boratpose {
+	-webkit-transform: translate(80px, -30px) rotate(20deg);
 	transform: translate(80px, -30px) rotate(20deg);
-}
-
-#boratgreat {
 }
 
