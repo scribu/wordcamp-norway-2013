@@ -1,21 +1,13 @@
 ## Setup
 
-Have node.js (and npm) installed.
+Have [jekyll](http://jekyllrb.com) installed:
 
 ```bash
-# Install CoffeeScript (and cake)
-npm install -g coffee-script
+sudo gem install jekyll
+```
 
-# Install dependencies
-cd slides
-npm install
-
-## Usage
+## Build and view
 
 ```bash
-# Build HTML page
-cake build
-
-# View slides
-firefox index.html
+jekyll --server --auto
 ```
