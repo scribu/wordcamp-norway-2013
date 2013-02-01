@@ -53,15 +53,7 @@ Haven't those gone extinct since the 90's?!
 <p>Task: Set up a cron script that periodically updates everything.</p>
 
 <pre>
-#!/bin/bash
-
-cd /path/to/wp/install
-
-wp db export /tmp/backup.sql
-
-wp core update
-wp theme update --all
-wp plugin update --all
+{% include update.sh %}
 </pre>
 
 </div>
@@ -75,17 +67,7 @@ wp plugin update --all
 <p>Task: Access data in a WP install from a Python script.</p>
 
 <pre>
-import subprocess
-
-def get_wp_option(key):
-    command = ["wp", "option", "get", key]
-
-    proc = subprocess.Popen(command, stdout=subprocess.PIPE)
-    out, err = proc.communicate()
-
-    return out.strip("\n")
-
-print get_wp_option("home")
+{% include wp.py %}
 </pre>
 
 </div>
@@ -122,16 +104,11 @@ Task: Regenerate all thumbnails on a site.
 <div class="to-build">
 	<p>Task: Fool around.</p>
 
-<pre>
-$ wp shell 
-Type "exit" to close session.
-wp&gt; get_bloginfo('description')
-'Just another WordPress site'
-wp&gt; strrev($_)
-'etis sserPdroW rehtona tsuJ'
-wp&gt; 
-</pre>
-	</div>
+{% capture raw %}{% include repl.txt %}{% endcapture raw %}
+
+<pre>{{ raw | escape }}</pre>
+
+</div>
 
 <p id="boratgreat" class="blue to-build"><strong>Great success!</strong></p>
 </article>
@@ -141,13 +118,10 @@ wp&gt;
 
 Task: Create a plugin that registers a custom post type and a taxonomy.
 
-```
-wp scaffold plugin wcnorge
+<pre>
+{% include scaffold.sh %}
+</pre>
 
-wp scaffold post-type slides --plugin=wcnorge
-
-wp scaffold taxonomy slide_cat --post_types=slides --plugin=wcnorge
-```
 </article>
 
 <article>

@@ -1,0 +1,7 @@
+$ wp shell 
+Type "exit" to close session.
+wp> get_bloginfo('description')
+'Just another WordPress site'
+wp> strrev($_)
+'etis sserPdroW rehtona tsuJ'
+wp>
